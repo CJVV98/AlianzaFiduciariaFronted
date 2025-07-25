@@ -1,0 +1,39 @@
+.sidenav-container {
+  height: 100vh;
+
+}
+
+.sidenav {
+  width: 13rem;
+  background-color: var(--color-primary);
+}
+
+.main-content {
+  padding: 2vh;
+}
+
+
+.mat-mdc-list-item .mdc-list-item__primary-text {
+  color: white !important;
+   white-space: normal;
+  
+}
+
+a.mdc-list-item {
+ margin: 8%;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.icon-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+

@@ -1,0 +1,62 @@
+<mat-card class="admin-clients-card">
+   
+    <div class="busqueda-container">
+         <button mat-flat-button color="primary" (click)="openDialog()"> 
+            <mat-icon>search</mat-icon>
+            New Client
+        </button>
+         <button mat-flat-button color="primary"> 
+            <mat-icon>search</mat-icon>
+            Export to CSV
+        </button>
+    </div>
+    <div class="busqueda-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput [(ngModel)]="filter" class="input-simple" (keyup.enter)="search()" />
+        </mat-form-field>
+        <button mat-flat-button color="primary"> 
+            <mat-icon>search</mat-icon>
+            Advanced Search
+        </button>
+
+    </div>
+
+     <h2>Clients</h2>
+    <div class="table-container">
+        <table mat-table #table [dataSource]="clients" class="mat-elevation-z8">
+
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Shared Key </th>
+                <td mat-cell *matCellDef="let client"> {{client.user}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Business ID </th>
+                <td mat-cell *matCellDef="let client"> {{client.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> E-mail </th>
+                <td mat-cell *matCellDef="let client"> {{client.email}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="phone">
+                <th mat-header-cell *matHeaderCellDef> Phone </th>
+                <td mat-cell *matCellDef="let client"> {{client.phone}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="dateAdd">
+                <th mat-header-cell *matHeaderCellDef> Date Added </th>
+                <td mat-cell *matCellDef="let client"> {{client.dateAdd}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+         <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+         </mat-paginator>
+    </div>
+</mat-card>

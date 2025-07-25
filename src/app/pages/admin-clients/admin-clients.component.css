@@ -1,0 +1,21 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+table {
+  min-width: 100%;
+}
+.busqueda-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 30%;
+}
+.admin-clients-card{
+    padding: 3%;
+}
