@@ -16,7 +16,6 @@ Este proyecto es una aplicación web construida con **Angular**, **Angular Mater
 ## 🚀 Instalación
 
 ```bash
-git clone https://github.com/tu-usuario/clientes-app.git
-cd clientes-app
+git clone https://github.com/CJVV98/AlianzaFiduciariaFronted.git
 npm install
 
