@@ -10,6 +10,9 @@ Este proyecto es una aplicación web construida con **Angular**, **Angular Mater
 - RxJS
 - TypeScript
 
+## Pruebas
+![Diseño](./assets/vista.png)
+
 ## 🚀 Instalación
 
 ```bash
