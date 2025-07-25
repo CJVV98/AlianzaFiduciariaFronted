@@ -1,6 +1,6 @@
 # Clientes App - Angular + GraphQL + Angular Material
 
-Este proyecto es una aplicación web construida con **Angular**, **Angular Material** y **GraphQL**, que permite crear y listar clientes con un formulario dentro de un `MatDialog`.
+Este proyecto es una aplicación web construida con **Angular**, **Angular Material** y **GraphQL**, que permite crear y listar clientes`.
 
 ## 📦 Tecnologías
 
