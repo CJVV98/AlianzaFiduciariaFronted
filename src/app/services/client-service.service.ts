@@ -10,7 +10,10 @@ export class ClientServiceService {
   variableReactiva = new Subject<string>();
   constructor(private readonly apollo: Apollo) {}
 
-
+/**
+ * Metodo para obtener todos los clientes
+ * @returns listado de clientes
+ */
   getClients(){
     return this.apollo.query({
       query: gql`
@@ -28,7 +31,11 @@ export class ClientServiceService {
       `
     });
   }
-
+/**
+ * Metodo para crear un nuevo cliente
+ * @param clientData Información del cliente a crear
+ * @returns 
+ */
   createClient(clientData: any) {
     console.log('Creating client with data:', clientData);
     return this.apollo.mutate({

@@ -24,6 +24,10 @@ export class AdminClientsComponent {
   ngOnInit(): void {
      this.getClients();
   }
+  /**
+   * Obhetener todos los clientes
+   * @returns listado de clientes
+   */
   getClients() {
     this.clientServices.getClients().subscribe((result: any) => {
       console.log('Clients fetched:', result.data.findAll);
@@ -31,17 +35,25 @@ export class AdminClientsComponent {
           this.table.renderRows();
       });
   }
+  /**
+   * Filtrar clientes por nombre o email
+   */
   search(): void {
     if (this.filter.trim() === '') {
       this.ngOnInit(); 
     } else {
       this.clients.data = this.clients.data.filter(client =>
         client.name.toLowerCase().includes(this.filter.toLowerCase()) ||
-        client.email.toLowerCase().includes(this.filter.toLowerCase())
+        client.email.toLowerCase().includes(this.filter.toLowerCase()) ||
+        client.phone.toLowerCase().includes(this.filter.toLowerCase()) ||
+        client.dateAdd.toLowerCase().includes(this.filter.toLowerCase()) ||
+        client.user.toLowerCase().includes(this.filter.toLowerCase()) 
       );
     }
   }
-
+  /**
+   * Abrir el dialogo para crear un nuevo cliente
+   */
   openDialog() {
     const dialogRef = this.dialog.open(NewClientComponent, {
       width: '60vh',

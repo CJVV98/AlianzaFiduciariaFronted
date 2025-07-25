@@ -21,6 +21,10 @@ export class NewClientComponent {
       endDate: ['', Validators.required]
     });
  }
+ /**
+  * Enviar el formulario para crear un nuevo cliente
+  * @param formInfoClient Información del cliente a crear
+  */
  send(){
   const formInfoClient = this.formClient.value;
    const client = {
@@ -38,6 +42,9 @@ export class NewClientComponent {
       }
     });
  }
+ /**
+  * Cerrar el dialogo sin enviar datos
+  */
  close(){
   this.dialogRef.close(this.formClient.value);
  }
