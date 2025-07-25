@@ -48,7 +48,7 @@ describe('ClientServiceService', () => {
     service.getClients().subscribe(response => {
       expect(response).toContain(responseClient.data.findAll);
       expect(apolloTest.query).toHaveBeenCalled();
-      done(); // Completa la prueba asíncrona
+      done();
     });
   });
 });
